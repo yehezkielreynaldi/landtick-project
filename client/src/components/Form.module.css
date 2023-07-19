@@ -1,0 +1,22 @@
+.formGroup {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+.judul {
+text-align: center !important;
+margin-top: 10px;
+margin-bottom: 60px;
+background: -webkit-linear-gradient(180deg,
+    #EC7AB7,
+    #EC7A7A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.formControl{
+    width: 20em;
+}

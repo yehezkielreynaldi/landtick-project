@@ -1,0 +1,733 @@
+/* List Ticket */
+
+.list-judul-tiket {
+    margin: 50px 0px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.judul1 {
+    margin-left: 150px;
+
+}
+
+.judul2 {
+    margin-left: -60px;
+}
+
+.judul3 {
+    margin-left: -300px;
+}
+
+.judul4 {
+    margin-left: -450px
+}
+
+.judul5 {
+    margin-left: -350px;
+}
+
+.card-ticket {
+    width: 85%;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: -40px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    border: 1px solid #B7B7B7;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.isi1 {
+    margin-left: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail-isi1 {
+    color: #B7B7B7;
+    margin-left: 50px;
+    font-size: 12px;
+    margin-top: -15px;
+}
+
+.isi2 {
+    margin-left: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail-isi2 {
+    color: #B7B7B7;
+    margin-left: -61px;
+    font-size: 12px;
+    margin-top: -16px;
+}
+
+.isi3 {
+    margin-left: -50px;
+    font-size: 20px;
+}
+
+.isi4 {
+    margin-left: -167px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.detail-isi4 {
+    color: #B7B7B7;
+    margin-left: -465px;
+    font-size: 12px;
+    margin-top: -17px;
+}
+
+.isi5 {
+    margin-left: -160px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.isi6 {
+    margin-left: -55px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #EC7A7A;
+}
+
+/* card ticket 2 */
+
+.baris2-card-ticket {
+    margin-top: -10px;
+}
+
+/* card ticket 3 */
+.baris3-card-ticket {
+    margin-top: -10px;
+    margin-bottom: 116px;
+}
+
+/* Footer */
+.custom-footer {
+    height: 80px;
+    background: linear-gradient(90deg, #EC7AB7 0%, #EC7A7A 100%);
+    /* position: absolute; */
+    /* bottom: 0px; */
+}
+
+/* Navbar User */
+.username-nav {
+    margin-top: 10px;
+    font-size: 20px;
+    background: -webkit-linear-gradient(45deg, #EC7A7A,#EC7AB7);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    font-weight: bold;
+    margin-left: 950px;
+    position: relative;
+}
+
+.avauser {
+    width: 50px;
+    height: 50px;
+    margin-left: -10px;
+    margin-top: 3px;
+    border: 2px solid green;
+    border-radius: 50px;
+    border: double 5px transparent;
+    background-image: linear-gradient(white,white), linear-gradient(90deg,#EC7AB7,#EC7A7A);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+
+}
+
+.foto-user {
+    width: 33px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    left: 3px;
+    top: 6px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    image-rendering: pixelated;
+}
+
+.logo-nav-user {
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.judul-logo-user {
+    margin-top: 10px;
+    background: -webkit-linear-gradient(45deg, #EC7AB7, #EC7A7A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dropdown-user {
+    position: absolute;
+    right: 130px;
+    top: 10px;
+    z-index: 2;
+}
+
+.dropdown-toggle-user {
+    opacity: 0;
+    width: 200px;
+    margin-right: -100px;
+}
+
+.menu-dropdown-user {
+    position: absolute;
+    top: 45px !important;
+    left: 10px !important;
+    z-index: 5 !important;
+}
+
+.divider-line {
+    background: linear-gradient(270deg, #EC7AB7 0%, #EC7A7A 100%) !important;
+    height: 2px;
+}
+
+/* Akhir navbar-user */
+
+/* Tiket */
+.ticket-warpper {
+    margin-top: 70px;
+}
+
+.judul-tiket {
+    margin-top: 70px;
+    margin-left: 90px;
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.kartu-tiket {
+    width: 79%;
+    height: 344px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid #B7B7B7;
+}
+
+.head-tiket {
+    width: 186px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    border-bottom-right-radius: 93px;
+    background: linear-gradient(90deg, #EC7AB7 0%, #EC7A7A 100%);
+}
+
+.tiket-land {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.logo-ticket {
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    image-rendering: pixelated;
+    position: absolute;
+    top: -8px;
+    left: 90px;
+}
+
+.train-head {
+    position: relative;
+    /* left: 390px; */
+    font-size: 36px;
+    overflow: hidden;
+}
+
+.train-par {
+    position: relative;
+    top: -5px;
+    /* left: 373px; */
+    font-size: 16px;
+}
+
+.baris-tiket-1 {
+    margin-top: -40px;
+}
+
+.icon-berangkat {
+    width: 16px;
+    height: 16px;
+    border: 2px solid green;
+    border-radius: 16px;
+    border: double 2px transparent;
+    background-image: linear-gradient(white, white), linear-gradient(90deg, #EC7AB7, #EC7A7A);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-left: -100px;
+    margin-top: 15px;
+}
+
+.kereta-tiket {
+    font-size: 20px;
+}
+
+.jam-tiket {
+    margin-left: -340px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.dari-tiket {
+    margin-left: -450px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.kelas-tiket {
+font-size: 14px;
+font-weight: 500;
+}
+
+.line-destination {
+    border-left: 1px #D0D0D0 solid;
+    width: 1px;
+    height: 50px;
+    margin-left: -93px;
+    margin-top: -8px;
+}
+
+.tanggal-dari {
+    margin-left: -340px;
+    margin-top: -15px;
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+
+}
+
+.lokasi-dari {
+    margin-left: -450px;
+    margin-top: -15px;
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-status {
+    width: 69px;
+    height: 24px;
+    line-height: 12px;
+    font-size: 10px;
+    border-radius: 2px;
+    background: #fdf3e8;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #F7941E;
+}
+
+.line-destination1 {
+    width: 18px;
+    height: 18px;
+    border: 2px solid green;
+    border-radius: 18px;
+    border: double 2px transparent;
+    background-image: linear-gradient(90deg, #EC7AB7, #EC7A7A);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    margin-left: -101px;
+    margin-top: 2px;
+}
+
+.jam-sampai-tiket{
+    margin-left: -340px;
+    margin-top: -10px;
+    font-size: 18px;
+    font-weight: 600
+}
+
+.sampai-tiket {
+    margin-left: -450px;
+    margin-top: -12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.tanggal-sampai {
+    margin-left: 222px;
+    margin-top: -15px;
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.lokasi-sampai {
+    margin-left: -167px;
+    margin-top: -15px;
+    color: #959595;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.id-cust {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.name-cust {
+    margin-left: -60px;
+    font-size: 16px;
+}
+
+.phone-cust {
+    margin-left: -160px;
+    font-size: 16px;
+}
+
+.mail-cust {
+    margin-left: -270px;
+    font-size: 16px;
+}
+
+.line-card-ticket {
+    margin-top: 0px;
+    margin-left: -28px;
+    width: 80%;
+    border: 1px solid;
+}
+
+.id-cust-p {
+    color: #B1B1B1;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.name-cust-p {
+    color: #B1B1B1;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -4px;
+}
+
+.phone-cust-p {
+    color: #B1B1B1;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -45px;
+}
+
+.mail-cust-p {
+    color: #B1B1B1;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: -100px;
+}
+
+.btn-bayar-tiket {
+    width: 226px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(90deg, #EC7AB7 0%, #EC7A7A 100%);
+    line-height: 20px;
+    margin-top: -5px;
+    margin-left: -30px;
+}
+
+/* Akhir Tiket */
+
+/* Tiket Approve */
+.btn-status-approve {
+    width: 75px;
+    height: 24px;
+    line-height: 12px;
+    font-size: 10px;
+    border-radius: 2px;
+    background: #e7fced;
+    border: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+    color: #68f284;
+}
+
+.barisqr{
+    position: absolute;
+}
+
+.qrcode-approve {
+    position: absolute;
+    right: 65px;
+    object-fit: cover;
+    image-rendering: crisp-edges;
+    backface-visibility: hidden;
+    image-rendering: pixelated;
+}
+
+.bayar-approve {
+    display: none;
+}
+
+.baris-kodeqr {
+    position: absolute;
+}
+
+.kodeqr {
+    position: absolute;
+    top: 8px;
+    right: 81px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* index admin */
+.judul-list-transaksi {
+    margin-top: 70px;
+    margin-left: 100px;
+}
+
+.baris0-admin {
+    border-bottom: 2px solid #C4C4C4;
+}
+
+.baris1-admin {
+    border-bottom: 2px solid #C4C4C4;
+}
+
+.icon-sed {
+    cursor: pointer;
+}
+
+/* Modal Edit */
+
+.button-save {
+    margin: 0 auto;
+    width: 75%;
+    background: #0ACF83;
+}
+
+/* Add Ticket Admin */
+.title-addticket {
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.form-add-ticket {
+    width: 85%;
+    margin: 0 auto;
+    margin-left: 80px;
+    margin-top: 50px;
+
+}
+
+.button-save-add {
+    margin-left: 450px;
+    margin-top: 40px;
+    width: 30%;
+    background: #0ACF83;
+}
+
+.input-dropdown {
+    width: 100%;
+}
+
+/* Ticket Detail Admin */
+.date-detail {
+    margin-top: -60px;
+    font-size: 15px;
+}
+
+.kelas-detail {
+    margin-top: -5px;
+    font-size: 14px;
+}
+
+.gambar-qrdetail {
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.kode-qr {
+    font-size: 13px;
+    margin-left: 9px;
+}
+
+.icon-detail-ticket {
+    margin-left: -1px !important;
+}
+
+.berangkat-detail {
+    margin-left: -120px;
+}
+
+.berangkat-detail1 {
+    margin-top: -10px;
+    margin-left: -120px;
+    font-size: 14px;
+}
+
+.baris-detail {
+    margin-left: 6px !important;
+    height: 70px !important;
+}
+
+.sampai-detail {
+    margin-left: -120px;
+}
+
+.sampai-detail1 {
+    margin-top: -10px;
+    font-size: 14px;
+    margin-left: 35px;
+}
+
+.detail2 {
+    margin-left: -40px;
+}
+
+.garis-detail {
+    width: 100% !important;
+    margin-left: 0px;
+    overflow: hidden;
+    border: 2px solid black;
+
+}
+
+.invoice-detail {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.isi-invoice-detail {
+    font-size: 12px;
+}
+
+.phone-admin {
+    position: relative;
+    left: 30px;
+}
+
+.email-admin {
+    position: relative;
+    left: 23px;
+}
+
+.nama-admin {
+    position: relative;
+    left: 14px;
+}
+
+.invoice-price {
+    background-color: #E6E6E6;
+    width: 100%;
+    margin-left: 1px;
+}
+
+/* modal detail tiket */
+.head-modal-tiket {
+    margin-left: 333px;
+    border-bottom-right-radius: 0px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 200px !important;
+}
+
+.kode-invoice {
+    margin-top: -10px;
+    font-size: 12px;
+}
+
+.qr-modal {
+position: absolute;
+left: 340px;
+top: 120px;
+object-fit: cover;
+image-rendering: pixelated;
+}
+
+.date-detail-modal {
+    margin-top: -5px;
+}
+
+.kode-qr-modal {
+    position: relative;
+    top: 200px;
+    left: 110px;
+    font-size: 17px;
+}
+
+.icon-pass {
+    margin-top: 20px;
+}
+
+.desc-pass {
+    position: relative;
+    width: 120px;
+    left: -20px;
+    font-size: 13px;
+}
+
+.icon-clock {
+    margin-top: 20px;
+    margin-left: -40px;
+}
+
+.desc-clock {
+    position: relative;
+    width: 120px;
+    left: -45px;
+    font-size: 13px;
+}
+
+.icon-warning {
+    margin-top: 20px;
+    margin-left: -80px;
+}
+
+.desc-warning {
+    position: relative;
+    width: 120px;
+    font-size: 13px;
+    right: -15px;
+    margin-left: -100px;
+}
+
+.garisb-modalt {
+    width: 110%;
+    margin-left: -22px;
+    position: relative;
+    top: 10px;
+    border: 1px solid black;
+}
+
+.garisb-modalt1 {
+    margin-top: -5px;
+    width: 110%;
+    margin-left: -22px;
+    border: 1px solid black;
+}
+
+/* home */
+.input-content2 {
+    position: absolute;
+}
+
+.select-dewasa {
+    margin-top: -15px;
+    width: 80px;
+margin-left: 100px;
+font-size: 13px;
+}
+
+.select-bayi {
+    margin-left: 30px;
+}

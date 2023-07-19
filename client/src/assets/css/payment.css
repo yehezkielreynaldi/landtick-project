@@ -1,0 +1,214 @@
+/* Attention */
+
+.judul-payment {
+    color: #000;
+    font-size: 30px;
+    font-weight: 400;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+.container-card-attention {
+    width: 50%;
+    height: 134px;
+    margin-left: 90px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid #BBB;
+    background: #EEE;
+}
+
+.logo-attention {
+    margin-top: 25px;
+}
+
+.isi-attention {
+    margin-left: -280px;
+    /* width: 550px; */
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container-card-user {
+    width: 50%;
+    height: 134px;
+    margin-left: 90px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 1px solid #BBB;
+    background: #FFF;
+}
+
+.head-user-payment {
+    width: 166px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    border-bottom-right-radius: 93px;
+    background: linear-gradient(90deg, #EC7AB7 0%, #EC7A7A 100%);
+}
+
+.user-head {
+    color: #FFF;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+.white-train {
+    margin-top: -5px;
+    margin-left: -18px;
+}
+
+.line-user {
+    margin-top: -10px;
+    margin-left: -28px;
+    width: 737px;
+    border: 1px solid gray;
+}
+
+.baris-user {
+    margin-top: 40px;
+    font-size: 15px;
+}
+
+.baris-user1 {
+    color: #B1B1B1;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -8px;
+}
+
+.judul-rincian {
+    margin-top: 20px;
+    color: #000;
+    font-size: 25px;
+}
+
+.card-harga {
+    margin-top: -3px;
+    width: 26%;
+    height: 125px;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #B7B7B7;
+}
+
+.baris1-harga {
+    color: #000;
+    font-size: 14.5px;
+    font-weight: 400;
+}
+
+.baris2-harga {
+    width: 100%;
+    height: 46px;
+    border-radius: 5px;
+    background: #E6E6E6;
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+}
+
+.tiket-harga {
+    width: 385px;
+    height: 35px;
+    margin-top: 75px;
+}
+
+.container-tiket-scan {
+    width: 35%;
+    position: absolute;
+    top: 169px;
+    right: 115px;
+    background: #F5F5F5;
+    overflow: hidden;
+    border-radius: 0%;
+}
+
+.baris1-scan {
+    width: 516px;
+    background: #D0D0D0;
+    margin-top: -16px;
+    margin-left: -28px;
+}
+
+.gambar-qrscan {
+    margin-left: 160px;
+}
+
+.date-scan {
+    color: #878787;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.codeqr-scan {
+    margin-left: 167px;
+    margin-top: 4px;
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.nama-scan {
+    margin-top: 20px;
+    color: #000;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.kelas-scan {
+    margin-top: -2px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.icon-scan {
+    margin-left: 10px;
+}
+
+.line-scan {
+    margin-left: 17px;
+    height: 110px;
+}
+
+.line-scan1 {
+    margin-top: 0px;
+    margin-left: 9px;
+}
+
+.date2-scan {
+    margin-top: -8px;
+    margin-left: 80px;
+    font-size: 14px;
+    color: #959595;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.date1-scan {
+    margin-top: -10px;
+    color: #959595;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.date3-scan {
+    margin-top: -8px;
+    margin-left: -40px;
+    color: #959595;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.baris3-scan {
+    margin-top: -20px;
+}

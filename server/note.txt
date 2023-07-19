@@ -1,0 +1,30 @@
+	e.GET("/", func(c echo.Context) error {
+		c.Response().Header().Set(echo.HeaderContentType, echo.MIMEApplicationJSON)
+		c.Response().WriteHeader(http.StatusOK)
+
+		return c.String(http.StatusOK, "Hello World")
+	})
+
+
+	KITA BUATNYA : CONNECTION => MODELS => MIGRATIONS => REPOSITORY => HANDLERS => ROUTES => MAIN
+
+KOMPUTER MEMBACANYA :	MAIN => ROUTES => HANDLERS => REPOSITORY => MODELS => DATABASE
+
+	API => Koneksi/Perantara/Translater dua atau lebih aplikasi untuk berkomunikasi.
+
+	REST => Structure/Architecture/Aturan dalam pembuatan web/sofware, API. Scalable, decouple, http/s, JSON.
+
+	ORM => Assosiasi, HOOKS, Eager dst. Object Relations Mapping. Pengatur migrasi, teknik manipulasi data dari db to object.
+
+	GORM => Golang ORM.
+
+	STRUKTUR FOLDER :
+
+	- database : untuk hal2 yang menyangkut dengan database seperti migrasi
+	- dto : untuk melakukan data transfer objek baik request maupun Response
+	- handlers : untuk handling fungsi2 yang ingin dijalankan
+	- models : untuk model dari struct yang ingin kita gunakan di database
+	- pkg/package : untuk menampung package
+	- repository : untuk menampung dari beberapa repository/usecase yang digunakan
+	- routes : untuk membuat routes
+	- main : tempat semua dijalankan pertama kali
