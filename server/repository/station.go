@@ -17,8 +17,7 @@ func RepositoryStation(db *gorm.DB) *repository {
 
 func (r *repository) FindStation() ([]models.Station, error) {
 	var stations []models.Station
-	err := r.db.Raw("SELECT * FROM stations").Scan(&stations).Error //Ini Pake GORM
-	// err := r.db.Find(&stations).Error //Ini ORM
+	err := r.db.Find(&stations).Error
 
 	return stations, err
 }
