@@ -14,7 +14,7 @@ type StationResponse struct {
 }
 
 func (Station) TableName() string {
-	return "station"
+	return "stations"
 }
 
 func (StationResponse) TableName() string {

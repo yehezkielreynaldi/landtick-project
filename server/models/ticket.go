@@ -34,5 +34,5 @@ type TicketResponse struct {
 }
 
 func (TicketResponse) TableName() string {
-	return "ticket"
+	return "tickets"
 }
