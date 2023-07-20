@@ -101,7 +101,7 @@ func (h *handlerTicket) CreateTicket(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, dto.ErrorResult{
 			Status:  "Error",
-			Message: "error 2"})
+			Message: err.Error()})
 	}
 
 	return c.JSON(http.StatusOK, dto.SuccessResult{
