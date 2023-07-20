@@ -1,9 +1,9 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 // import { useNavigate } from 'react-router-dom';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { API } from '../config/api';
-import { useMutation } from 'react-query';
+import { useMutation, useQuery } from 'react-query';
 import { useNavigate } from 'react-router-dom';
 function AddTicket() {
     // const navigate = useNavigate();
@@ -11,7 +11,6 @@ function AddTicket() {
     // Store Data Ticket
 
     const navigate = useNavigate();
-    const [stations, setStations] = useState([])
     const [form, setForm] = useState({
         name_train: "",
         type_train: "",
@@ -25,14 +24,16 @@ function AddTicket() {
     })
     console.log(form);
 
-    const getStations = async () => {
+    const { data: stations } = useQuery("ticketCache", async () => {
         try {
             const response = await API.get("/stations")
-            setStations(response.data.data.stations)
+            return response.data.data.stations
         } catch (error) {
             console.log(error);
         }
-    }
+    })
+
+    console.log(stations)
 
     const handleChange = (e) => {
         setForm({
@@ -77,10 +78,6 @@ function AddTicket() {
             console.log("Add Ticket Failed : ", error);
         }
     });
-
-    useEffect(() => {
-        getStations();
-    }, []);
 
     return (
         <div style={{ height: '90vh' }}>
