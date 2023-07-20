@@ -4,7 +4,13 @@ go 1.20
 
 require github.com/go-playground/validator v9.31.0+incompatible
 
-require gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
+require (
+	github.com/jackc/pgpassfile v1.0.0 // indirect
+	github.com/jackc/pgservicefile v0.0.0-20221227161230-091c0ba34f0a // indirect
+	github.com/jackc/pgx/v5 v5.4.2 // indirect
+	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
+	gorm.io/driver/postgres v1.5.2 // indirect
+)
 
 require (
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
