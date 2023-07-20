@@ -12,6 +12,13 @@ export default function AddTicket() {
     });
     console.log(form);
 
+    // Configuration
+    const config = {
+        headers: {
+            'Content-type': 'multipart/form-data',
+        },
+    };
+
     setAuthToken(localStorage.token)
 
     const handleChange = (e) => {
@@ -28,7 +35,7 @@ export default function AddTicket() {
             formData.set("name", form.name);
             formData.set("kota", form.kota);
 
-            const response = await API.post("/station", formData);
+            const response = await API.post("/station", formData, config);
             if (response.status === 200) {
                 Swal.fire({
                     position: "center",
