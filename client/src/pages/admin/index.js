@@ -102,9 +102,9 @@ function PageAdmin() {
 
     return (
         <>
-            <div style={{ height: '90vh' }}>
+            <div style={{ height: '100%' }}>
                 <h2 className='judul-list-transaksi'>List Transaksi</h2>
-                <Container>
+                <Container className='mb-5'>
                     <Row className='baris0-admin mt-5'>
                         <Col><p>No</p></Col>
                         <Col><p>Users</p></Col>

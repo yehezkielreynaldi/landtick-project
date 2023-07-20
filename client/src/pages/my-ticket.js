@@ -4,7 +4,7 @@ import Ticket from "../components/ticket";
 
 function TicketPage() {
     return (
-        <div style={{ height: '120vh' }}>
+        <div style={{ height: '100%' }}>
             {/* {< NavBar />} */}
             {/* {<NavBarUser />} */}
             {<Ticket />}

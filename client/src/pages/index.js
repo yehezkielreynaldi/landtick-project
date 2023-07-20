@@ -16,12 +16,12 @@ function IndexPage() {
         });
     };
     return (
-        <div>
+        <div style={{ height: "200vh" }}>
             {/* {< NavBar />} */}
             {/* {<NavBarUser />} */}
             {<Jumbotron />}
             {<MainContent />}
-            {<ListTicket />}
+            {/* {<ListTicket />} */}
             {/* {<Footer />} */}
         </div>
     );

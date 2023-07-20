@@ -7,7 +7,7 @@
 }
 
 .judul1 {
-    margin-left: 150px;
+    margin-left: 50px;
 
 }
 
@@ -16,19 +16,19 @@
 }
 
 .judul3 {
-    margin-left: -300px;
+    margin-left: -130px;
 }
 
 .judul4 {
-    margin-left: -450px
+    margin-left: -250px
 }
 
 .judul5 {
-    margin-left: -350px;
+    margin-left: -200px;
 }
 
 .card-ticket {
-    width: 85%;
+    width: 95%;
     height: 90px;
     margin: 0 auto;
     margin-top: -40px;
@@ -53,38 +53,38 @@
 }
 
 .isi2 {
-    margin-left: 40px;
+    margin-left: 55px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .detail-isi2 {
     color: #B7B7B7;
-    margin-left: -61px;
+    margin-left: -30px;
     font-size: 12px;
     margin-top: -16px;
 }
 
 .isi3 {
-    margin-left: -50px;
+    margin-left: 5px;
     font-size: 20px;
 }
 
 .isi4 {
-    margin-left: -167px;
+    margin-left: -80px;
     font-size: 16px;
     font-weight: bold;
 }
 
 .detail-isi4 {
     color: #B7B7B7;
-    margin-left: -465px;
+    margin-left: -338px;
     font-size: 12px;
     margin-top: -17px;
 }
 
 .isi5 {
-    margin-left: -160px;
+    margin-left: -95px;
     font-size: 16px;
     font-weight: bold;
 }
@@ -213,6 +213,7 @@
     height: 344px;
     margin: 0 auto;
     margin-top: 30px;
+    /* margin-bottom: 100px; */
     border-radius: 5px;
     border: 1px solid #B7B7B7;
 }

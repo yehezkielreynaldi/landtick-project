@@ -35,7 +35,7 @@ function Ticket() {
     }
 
     return (
-        <div className="ticket-warpper">
+        <div className="ticket-warpper mb-5">
             <h3 className="judul-tiket">Tiket Saya</h3>
             {myTicket?.map((item, index) => (
                 <Card key={index} className="kartu-tiket" style={{ cursor: "default" }}>
@@ -69,7 +69,12 @@ function Ticket() {
                                 <Col><p className="lokasi-dari">{item?.ticket.start_station.name}</p></Col>
                             </Row>
                             <Row>
-                                <Col><Button variant="warning" className="btn-status ms-3" style={{ cursor: "default" }}>Pending</Button>{' '}</Col>
+                                <Col>
+                                    {item.status === "success" ? <Button variant="success" className="ms-3" style={{ cursor: "default" }}>{item?.status}</Button>
+                                        : item.status === "pending" ? <Button variant="warning" className=" ms-3" style={{ cursor: "default" }}>{item?.status}</Button>
+                                            : <Button variant="danger" className="ms-3" style={{ cursor: "default" }}>{item?.status}</Button>
+                                    }
+                                </Col>
                                 <Col><div className="line-destination1"></div></Col>
                                 <Col><p className="jam-sampai-tiket">{item?.ticket.arrival_time}</p></Col>
                                 <Col><p className="sampai-tiket">{item?.ticket.destination_station.kota}</p></Col>
@@ -94,7 +99,11 @@ function Ticket() {
                                 <Col><p className="name-cust-p">{state.user.username}</p></Col>
                                 <Col><p className="phone-cust-p">{item?.user.no_hp}</p></Col>
                                 <Col><p className="mail-cust-p">{item?.user.email}</p></Col>
-                                <Col><Button variant="dark" className="btn-bayar-tiket" onClick={() => handlePayment(item.id)}>Bayar Sekarang</Button>{' '}</Col>
+                                <Col>
+                                    {item.status === "success" ? <div></div>
+                                        :
+                                        (<Button variant="dark" className="btn-bayar-tiket" onClick={() => handlePayment(item.id)}>Bayar Sekarang</Button>)}
+                                </Col>
                             </Row>
                         </Container>
                     </Card.Body>

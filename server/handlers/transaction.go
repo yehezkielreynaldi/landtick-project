@@ -103,7 +103,7 @@ func (h *handlerTransaction) CreateTransaction(c echo.Context) error {
 		Total:    subTotal,
 		UserID:   userId,
 		Qty:      1,
-		Status:   request.Status,
+		// Status:   request.Status,
 	}
 
 	newTransaction, err := h.TransactionRepository.CreateTransaction(transaction)
@@ -255,9 +255,11 @@ func (h *handlerTransaction) Notification(c echo.Context) error {
 
 	order_id, _ := strconv.Atoi(orderId)
 
-	fmt.Print("payload: ", notificationPayload)
-
+	fmt.Println("fraud: ", fraudStatus)
+	fmt.Println("transactionStatus: ", transactionStatus)
+	fmt.Println("payload: ", notificationPayload)
 	transaction, _ := h.TransactionRepository.GetTransaction(order_id)
+	fmt.Println("data traction", transaction)
 	user, _ := h.UserRepository.GetUser(order_id)
 	if transactionStatus == "capture" {
 		if fraudStatus == "challenge" {

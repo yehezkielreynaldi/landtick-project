@@ -6,14 +6,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 // import { useNavigate } from 'react-router';
 import { UserContext } from '../context/userContext';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import NotifAddTicket from './notif-add-ticket';
 import FormLogin from './login/Form';
 import { API } from '../config/api';
 import { useQuery } from "react-query"
 
 
-function ListTicket() {
+function ListTicket({ startStation, destinationStation, search }) {
     // let navigate = useNavigate();
     const [state] = useContext(UserContext);
     const [show, setShow] = useState(false);
@@ -28,8 +28,9 @@ function ListTicket() {
 
     const [showModalNotif, setModalShowNotif] = useState(false);
 
-    let { data: Tickets } = useQuery('ticketCache', async () => {
-        const response = await API.get('/tickets');
+    let { data: Tickets, refetch } = useQuery('ticketCache', async () => {
+        const response = search ? (await API.get(`/filter-ticket?start_station_id=${startStation}&destination_station_id=${destinationStation}`)) :
+            (await API.get("/tickets"))
         return response.data.data;
     });
     console.log(Tickets);
@@ -53,8 +54,12 @@ function ListTicket() {
         }
     };
 
+    useEffect(() => {
+        refetch();
+    }, [search]);
+
     return (
-        <Container fluid>
+        <Container fluid style={{ height: "100%" }}>
             <Row className="list-judul-tiket">
                 <Col><p className="judul1">Nama Kereta</p></Col>
                 <Col><p className="judul2">Berangkat</p></Col>

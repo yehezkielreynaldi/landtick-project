@@ -10,6 +10,7 @@ import train from '../assets/img/train-menu.png'
 import datatf from '../assets/img/icons8-data-transfer-100 1.png'
 import { API } from '../config/api';
 import { useEffect, useState } from 'react';
+import ListTicket from './list-ticket';
 
 
 function MainContent() {
@@ -41,6 +42,13 @@ function MainContent() {
             ...form,
             [e.target.name]: e.target.value,
         })
+    }
+
+    // Filter
+    const [search, setSearch] = useState(false)
+    const handleClick = (e) => {
+        e.preventDefault()
+        form.start_station_id === '' && form.destination_station_id === '' ? setSearch(false) : setSearch(true)
     }
 
     useEffect(() => {
@@ -86,7 +94,7 @@ function MainContent() {
                         </Form.Select></Col>
                         <Col><Button variant="dark" className="btn-data-tf"><img width="30"
                             height="30" src={datatf} alt="icon-data-tf" className="icon-datatf" /></Button>{' '}</Col>
-                        <Col><Form.Select name="destination_id" className='control-tujuan' onChange={handleChange} value={form.destination_station_id}>
+                        <Col><Form.Select name="destination_station_id" className='control-tujuan' onChange={handleChange} value={form.destination_station_id}>
                             <option hidden>Stasiun Tujuan</option>
                             {stations?.map((item) => (
                                 <option key={item.id} value={item?.id}>
@@ -133,7 +141,7 @@ function MainContent() {
                                 <option>2</option>
                                 <option>3</option>
                             </Form.Select></Col>
-                        <Col><Button variant="dark" className="btn-cari-tiket">Cari Tiket</Button>{' '}</Col>
+                        <Col><Button type="submit" variant="dark" className="btn-cari-tiket" onClick={handleClick}>Cari Tiket</Button>{' '}</Col>
                     </Row>
 
 
@@ -143,7 +151,7 @@ function MainContent() {
 
 
             </Row >
-
+            <ListTicket startStation={form.start_station_id} destinationStation={form.destination_station_id} search={search} />
         </Container >
 
 
