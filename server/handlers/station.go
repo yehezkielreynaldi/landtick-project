@@ -2,12 +2,10 @@ package handlers
 
 import (
 	dto "landtick-be/dto/result"
-	stationdto "landtick-be/dto/station"
 	"landtick-be/models"
 	"landtick-be/repository"
 	"net/http"
 
-	"github.com/go-playground/validator/v10"
 	"github.com/labstack/echo/v4"
 )
 
@@ -39,25 +37,12 @@ func (h *handlerStation) FindStation(c echo.Context) error {
 }
 
 func (h *handlerStation) CreateStation(c echo.Context) error {
-	request := new(stationdto.CreateStationRequest)
-	if err := c.Bind(&request); err != nil {
-		return c.JSON(http.StatusBadRequest, dto.ErrorResult{
-			Status:  "Error",
-			Message: err.Error()})
-	}
-
-	validation := validator.New()
-	err := validation.Struct(request)
-
-	if err != nil {
-		return c.JSON(http.StatusBadRequest, dto.ErrorResult{
-			Status:  "Error",
-			Message: err.Error()})
-	}
+	name := c.FormValue("name")
+	kota := c.FormValue("kota")
 
 	data := models.Station{
-		Name: request.Name,
-		Kota: request.Kota,
+		Name: name,
+		Kota: kota,
 	}
 
 	response, err := h.StationRepository.CreateStation(data)
