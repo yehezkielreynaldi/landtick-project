@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Form, Button } from "react-bootstrap";
-import { API } from "../config/api";
+import { API, setAuthToken } from "../config/api";
 import { useMutation } from "react-query";
 import Swal from "sweetalert2";
 
@@ -11,6 +11,8 @@ export default function AddTicket() {
         kota: "",
     });
     console.log(form);
+
+    setAuthToken(localStorage.token)
 
     const handleChange = (e) => {
         setForm({
