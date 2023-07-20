@@ -81,7 +81,7 @@ func (h *handlerTicket) CreateTicket(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, dto.ErrorResult{
 			Status:  "Error",
-			Message: err.Error()})
+			Message: "Error 1"})
 	}
 
 	data := models.Ticket{
@@ -101,7 +101,7 @@ func (h *handlerTicket) CreateTicket(c echo.Context) error {
 	if err != nil {
 		return c.JSON(http.StatusInternalServerError, dto.ErrorResult{
 			Status:  "Error",
-			Message: err.Error()})
+			Message: "error 2"})
 	}
 
 	return c.JSON(http.StatusOK, dto.SuccessResult{

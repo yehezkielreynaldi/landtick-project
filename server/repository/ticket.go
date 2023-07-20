@@ -32,7 +32,7 @@ func (r *repository) GetTicket(ID int) (models.Ticket, error) {
 }
 
 func (r *repository) CreateTicket(tickets models.Ticket) (models.Ticket, error) {
-	err := r.db.Preload("StartStation").Preload("DestinationStation").Create(&tickets).Error
+	err := r.db.Create(&tickets).Error
 
 	return tickets, err
 }
