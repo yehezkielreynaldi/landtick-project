@@ -31,10 +31,10 @@ func (r *repository) GetTicket(ID int) (models.Ticket, error) {
 	return ticket, err
 }
 
-func (r *repository) CreateTicket(tickets models.Ticket) (models.Ticket, error) {
-	err := r.db.Create(&tickets).Error
+func (r *repository) CreateTicket(ticket models.Ticket) (models.Ticket, error) {
+	err := r.db.Create(&ticket).Error
 
-	return tickets, err
+	return ticket, err
 }
 
 func (r repository) FilterTickets(StartStationID, DestinationStationID int) ([]models.Ticket, error) {
