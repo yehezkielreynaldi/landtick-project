@@ -69,7 +69,7 @@ function FormDaftar() {
 
             <Form.Group as={Row} className="mb-4">
                 <Col sm="5">
-                    <Form.Control className={cssModules.formControl} type="text" placeholder="Username" value={username}
+                    <Form.Control className={cssModules.formControl} maxlength="5" type="text" placeholder="Username" value={username}
                         name="username"
                         onChange={handleChange} />
                 </Col>

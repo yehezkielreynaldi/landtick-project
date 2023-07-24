@@ -13,8 +13,8 @@ function Attention() {
                         <Row>
                             <Col><img src={logoattention} className="logo-attention" width="40" height="40" alt="attention-logo" /></Col>
                             <Col><div className="isi-attention">
-                                <p>Silakan melakukan pembayaran memalui M-Banking, E-Banking dan ATM Ke <br /> No.rek Yang Tertera .</p>
-                                <p>No.rek : 09812312312</p>
+                                <p>Silakan melakukan pembayaran melalui Payment Gateway dengan credit card dengan cara :</p>
+                                <p>Klik Button Bayar Sekarang</p>
                             </div></Col>
                         </Row>
                     </Container>
