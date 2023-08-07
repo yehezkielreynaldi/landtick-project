@@ -8,6 +8,9 @@ import { useContext } from "react";
 import { UserContext } from "../context/userContext";
 
 function IndexPage() {
+    const title = "Home";
+    document.title = "Landtick | " + title;
+
     const [_, dispatch] = useContext(UserContext);
 
     const logout = () => {
@@ -16,6 +19,7 @@ function IndexPage() {
         });
     };
     return (
+
         <div style={{ height: "200vh" }}>
             {/* {< NavBar />} */}
             {/* {<NavBarUser />} */}

@@ -9,7 +9,7 @@ import { UserContext } from "../../context/userContext";
 
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { API } from "../../config/api";
+import { API, setAuthToken } from "../../config/api";
 
 import { useQuery, useMutation } from "react-query";
 import DeleteData from "../../components/modal-delete";
@@ -67,6 +67,8 @@ function PageAdmin() {
         handleShowDelete();
     };
 
+    setAuthToken(localStorage.token);
+
     let { data: transactionList, refetch } = useQuery("allTansactionCache", async () => {
         const response = await API.get("/transactions");
         console.log("ini console response", response);
@@ -80,7 +82,6 @@ function PageAdmin() {
             const response = await API.delete(`/transaction/${id}`);
             console.log(response);
             refetch();
-            navigate("/");
         } catch (error) {
             console.log(error);
         }
@@ -121,7 +122,7 @@ function PageAdmin() {
                                 {data.status === "success" && <td style={{ color: "#78A85A" }}>{data.status}</td>}
                                 {data.status === "failed" && <td style={{ color: "#E83939" }}>{data.status}</td>}</p></Col>
                             <Col className='icon-sed'><img src={iconSearch} width="25" height="25" alt='icon-search' className='icon-search' onClick={() => { setShowDetail(true); setIdTransaction(data.id) }} />
-                                <img src={iconEdit} width="25" height="25" alt='icon-edit' className='icon-edit ms-3' onClick={handleShow} />
+
                                 <img onClick={() => handleDelete(data.id)} src={iconDelete} width="25" height="25" alt='icon-delete' className='icon-delete ms-3' />
                             </Col>
                         </Row>

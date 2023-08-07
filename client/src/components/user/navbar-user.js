@@ -17,7 +17,7 @@ function NavBarUser() {
         <>
             <Navbar className="bg-body-black bg-white navbar ">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand>
                         <Row>
                             <Col>
                                 <h3 className="judul-logo-user">LandTick</h3>
@@ -37,10 +37,10 @@ function NavBarUser() {
                                 <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className="dropdown-toggle-user" />
 
                                 <Dropdown.Menu className="menu-dropdown-user">
-                                    <Dropdown.Item href="#/action-1"><img src={picticket} alt="logo-tiket" width="30" height="30" className="logo-tiket" /> Tiket Saya</Dropdown.Item>
-                                    <Dropdown.Item href="#/action-2"><img src={bill} alt="logo-bill" width="30" height="30" className="logo-bill" /> Payment</Dropdown.Item>
+                                    <Dropdown.Item><img src={picticket} alt="logo-tiket" width="30" height="30" className="logo-tiket" /> Tiket Saya</Dropdown.Item>
+                                    <Dropdown.Item><img src={bill} alt="logo-bill" width="30" height="30" className="logo-bill" /> Payment</Dropdown.Item>
                                     <Dropdown.Divider className="divider-line" />
-                                    <Dropdown.Item href="#/action-3"><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
+                                    <Dropdown.Item><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
                                 </Dropdown.Menu>
                             </Dropdown> <div className="avauser"><img src={avauser} className="foto-user object-fit-cover" alt="foto-user" id="dropdown-split-basic" /></div></Col>
                         </Row>

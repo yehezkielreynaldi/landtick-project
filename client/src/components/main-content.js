@@ -19,6 +19,7 @@ function MainContent() {
         try {
             const response = await API.get("/stations")
             setStations(response.data.data.stations)
+            console.log("test station", response);
         } catch (error) {
             console.log(error);
         }
@@ -104,43 +105,8 @@ function MainContent() {
                         </Col>
                     </Row>
 
-                    <Row className="label-content2">
-                        <Col><p className="label-berangkat">Tanggal Berangkat</p></Col>
-
-                        <Col> <Form>
-                            {['checkbox'].map((type) => (
-                                <div key={`default-${type}`} className="mb-3">
-                                    <Form.Check // prettier-ignore
-                                        type={type}
-                                        id={`default-${type}`}
-                                        label={`Pulang Pergi`}
-                                        className="check-pp"
-                                    />
-                                </div>
-                            ))}
-                        </Form></Col>
-                        <Col><p className="label-dewasa">Dewasa</p></Col>
-                        <Col><p className="label-bayi">Bayi</p></Col>
-                    </Row>
 
                     <Row className="input-content2">
-                        <Col><Form.Control type="date" placeholder="Input Date Please" className="date-content" /></Col>
-                        <Col></Col>
-                        <Col>
-                            <Form.Select className='select-dewasa'>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </Form.Select></Col>
-
-                        <Col>
-                            <Form.Select className='select-dewasa select-bayi'>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </Form.Select></Col>
                         <Col><Button type="submit" variant="dark" className="btn-cari-tiket" onClick={handleClick}>Cari Tiket</Button>{' '}</Col>
                     </Row>
 

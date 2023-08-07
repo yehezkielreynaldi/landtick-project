@@ -13,6 +13,6 @@ func StationRoutes(e *echo.Group) {
 	r := repository.RepositoryStation(mysql.DB)
 	h := handlers.HandlerStation(r)
 
-	e.GET("/stations", middleware.Auth(h.FindStation))
+	e.GET("/stations", (h.FindStation))
 	e.POST("/station", middleware.Auth(h.CreateStation))
 }

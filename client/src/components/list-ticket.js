@@ -11,10 +11,11 @@ import NotifAddTicket from './notif-add-ticket';
 import FormLogin from './login/Form';
 import { API } from '../config/api';
 import { useQuery } from "react-query"
+import { useNavigate } from 'react-router-dom';
+
 
 
 function ListTicket({ startStation, destinationStation, search }) {
-    // let navigate = useNavigate();
     const [state] = useContext(UserContext);
     const [show, setShow] = useState(false);
 
@@ -25,6 +26,8 @@ function ListTicket({ startStation, destinationStation, search }) {
 
     // const handleClose1 = () => setShow1(false);
     // const handleShow1 = () => setShow1(true);
+
+    const navigate = useNavigate();
 
     const [showModalNotif, setModalShowNotif] = useState(false);
 
@@ -45,10 +48,17 @@ function ListTicket({ startStation, destinationStation, search }) {
     };
 
     const HandleBuy = async (id) => {
+
+
         try {
-            const response = await API.post(`/create-trans/${id}`);
-            console.log(response);
-            return response.data.data;
+            if (state.isLogin) {
+                setModalShowNotif(true);
+                const response = await API.post(`/create-trans/${id}`);
+                console.log(response);
+                return response.data.data;
+            } else {
+                setShow(true);
+            }
         } catch (error) {
             console.log(error);
         }
@@ -67,37 +77,38 @@ function ListTicket({ startStation, destinationStation, search }) {
                 <Col><p className="judul4">Durasi</p></Col>
                 <Col><p className="judul5">Harga Per Orang</p></Col>
             </Row>
-            <Row onClick={
-                !state.isLogin
-                    ? () => setShow(true)
-                    : () => setModalShowNotif(true)
-            }>
-                {Tickets?.map((item, index) => {
-                    return (<Row><Card className="card-ticket" key={index} onClick={() => {
-                        state.isLogin === true ? setShow(false) : setModalShowNotif(true);
-                        HandleBuy(item.id);
-                    }}>
-                        <Card.Body>
-                            <Row className="baris1-ticket">
+            <Row>
+                {Tickets?.length === 0 ? (
+                    <h1 className='text-center'>Tiket Kosong</h1>
+                ) : (
+                    Tickets?.map((item, index) => {
+                        return (<Row>
+                            <Card className="card-ticket" key={index} onClick={() => {
+                                state.user.role === "admin" ? navigate("/") : HandleBuy(item.id)
+                            }}>
+                                <Card.Body>
+                                    <Row className="baris1-ticket">
 
-                                <Col><p className="isi1"> {item.name_train}</p></Col>
+                                        <Col><p className="isi1"> {item?.name_train}</p></Col>
 
-                                <Col><p className="isi2">{item.start_time}</p></Col>
-                                <Col><FontAwesomeIcon icon={faArrowRight} className="isi3" style={{ color: "#000000", }} /></Col>
-                                <Col><p className="isi4">{item.arrival_time}</p></Col>
-                                <Col><p className="isi5">{(parseInt(item.arrival_time) <= parseInt(item.start_time)) ? (parseInt(item.start_time) - parseInt(item.arrival_time)) : (parseInt(item.arrival_time) - parseInt(item.start_time))} Jam</p></Col>
-                                <Col><p className="isi6">{formatRupiah(item.price)}</p></Col>
-                            </Row>
-                            <Row>
-                                <Col><p className="detail-isi1">{item.type_train}</p></Col>
-                                <Col><p className="detail-isi2">{item.start_station.name}</p></Col>
-                                <Col className="detail-isi3"></Col>
-                                <Col><p className="detail-isi4">{item.destination_station.name}</p></Col>
-                            </Row>
-                        </Card.Body>
-                    </Card></Row>)
+                                        <Col><p className="isi2">{item?.start_time}</p></Col>
+                                        <Col><FontAwesomeIcon icon={faArrowRight} className="isi3" style={{ color: "#000000", }} /></Col>
+                                        <Col><p className="isi4">{item?.arrival_time}</p></Col>
+                                        <Col><p className="isi5">{(parseInt(item?.arrival_time) <= parseInt(item?.start_time)) ? (parseInt(item?.start_time) - parseInt(item?.arrival_time)) : (parseInt(item?.arrival_time) - parseInt(item?.start_time))} Jam</p></Col>
+                                        <Col><p className="isi6">{formatRupiah(item?.price)}</p></Col>
+                                    </Row>
+                                    <Row>
+                                        <Col><p className="detail-isi1">{item?.type_train}</p></Col>
+                                        <Col><p className="detail-isi2">{item?.start_station?.name}</p></Col>
+                                        <Col className="detail-isi3"></Col>
+                                        <Col><p className="detail-isi4">{item?.destination_station?.name}</p></Col>
+                                    </Row>
+                                </Card.Body>
+                            </Card></Row>)
+                    }
+                    )
+                )
                 }
-                )}
             </Row>
 
             <Modal show={show} showLogin={setShow} onHide={handleClose}>

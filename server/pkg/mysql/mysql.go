@@ -2,8 +2,8 @@ package mysql
 
 import (
 	"fmt"
-	// "gorm.io/driver/mysql"
 	"os"
+	// "gorm.io/driver/mysql"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -19,6 +19,7 @@ func DatabaseInit() {
 	// dsn := "root:@tcp(localhost:3306)/landtick-be?charset=utf8mb4&parseTime=True&loc=Local"
 	// DB, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
+	// For Deployment
 	var DB_HOST = os.Getenv("DB_HOST")
 	var DB_USER = os.Getenv("DB_USER")
 	var DB_PASSWORD = os.Getenv("DB_PASSWORD")

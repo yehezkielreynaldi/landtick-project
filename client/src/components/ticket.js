@@ -6,11 +6,14 @@ import Col from 'react-bootstrap/Col';
 import { useNavigate } from 'react-router-dom';
 import React, { useContext, useState } from "react";
 import { UserContext } from "../context/userContext";
-import { API } from "../config/api";
+import { API, setAuthToken } from "../config/api";
 import { useQuery } from "react-query";
 // import moment from "moment";
 
 function Ticket() {
+
+
+
     const navigate = useNavigate();
     const [state] = useContext(UserContext);
 
@@ -19,6 +22,8 @@ function Ticket() {
         return response.data.data;
     });
     console.log(myTicket);
+
+    setAuthToken(localStorage.token);
 
     const handlePayment = async (id) => {
         try {
@@ -95,7 +100,7 @@ function Ticket() {
                                 </Col>
                             </Row>
                             <Row>
-                                <Col><p className="id-cust-p ms-3">{item?.id}</p></Col>
+                                <Col><p className="id-cust-p ms-3">{item?.user.id}</p></Col>
                                 <Col><p className="name-cust-p">{state.user.username}</p></Col>
                                 <Col><p className="phone-cust-p">{item?.user.no_hp}</p></Col>
                                 <Col><p className="mail-cust-p">{item?.user.email}</p></Col>

@@ -130,7 +130,7 @@ function NavBar() {
                                                 <Dropdown.Item onClick={() => { navigate("/add-ticket-admin") }}><img src={addicon} alt="logo-tiket" width="25" height="25" className="logo-tiket me-1" /> Tambah Tiket</Dropdown.Item>
                                                 <Dropdown.Item onClick={() => { navigate("/add-station") }}><img src={addicon} alt="logo-tiket" width="25" height="25" className="logo-tiket me-1" /> Tambah Stasiun</Dropdown.Item>
                                                 <Dropdown.Divider className="divider-line" />
-                                                <Dropdown.Item onClick={logout} href="/"><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
+                                                <Dropdown.Item onClick={logout}><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown> <div className="avauser"><img src={avauser} className="foto-user object-fit-cover" alt="foto-user" id="dropdown-split-basic" /></div></Col>
                                     </>
@@ -145,10 +145,9 @@ function NavBar() {
                                             <Dropdown.Toggle split variant="success" id="dropdown-split-basic" className="dropdown-toggle-user" />
 
                                             <Dropdown.Menu className="menu-dropdown-user">
-                                                <Dropdown.Item onClick={() => { navigate("/ticket") }} href="#/action-1"><img src={picticket} alt="logo-tiket" width="30" height="30" className="logo-tiket" /> Tiket Saya</Dropdown.Item>
-                                                {/* <Dropdown.Item onClick={() => { navigate("/payment") }} href="#/action-2"><img src={bill} alt="logo-bill" width="30" height="30" className="logo-bill" /> Payment</Dropdown.Item> */}
+                                                <Dropdown.Item onClick={() => { navigate("/ticket") }}><img src={picticket} alt="logo-tiket" width="30" height="30" className="logo-tiket" /> Tiket Saya</Dropdown.Item>
                                                 <Dropdown.Divider className="divider-line" />
-                                                <Dropdown.Item onClick={logout} href="#/action-3"><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
+                                                <Dropdown.Item onClick={logout}><img src={piclogout} alt="logo-logout" width="27" height="27" className="logo-logout ms-1" /> Logout</Dropdown.Item>
                                             </Dropdown.Menu>
                                         </Dropdown> <div className="avauser"><img src={avauser} className="foto-user object-fit-cover" alt="foto-user" id="dropdown-split-basic" /></div></Col>
                                     </>
